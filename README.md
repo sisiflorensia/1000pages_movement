@@ -4,7 +4,7 @@
 This is a challenge to keep ourselves committed to daily practice of coding. Each and everyday, upload one webpage to your github, regardless the complexity.
 
 ## Why
-They said it takes 10K hours to master something. Let's do it in 1K ;)
+They say it takes 10K hours to master something. Let's do it in 1K ;)
 
 ## When
 The idea is to do it daily, and move on to different page the next day. This way, we can keep our daily creativity juice going on and not stuck in one spot.
