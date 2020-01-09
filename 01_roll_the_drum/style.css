@@ -1,0 +1,75 @@
+body,html {
+  font-size: 10px;
+  background: linear-gradient(180deg,rgba(48, 102, 190,.8) 0%,rgba(150, 52, 132, .8) 100%), url(images/concert.jpg) bottom center;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  min-height: 100vh;
+}
+
+.keys {
+  /* display: flex; */
+  /* flex: 1; */
+  min-height: 75vh;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.title {
+  font-size: 6rem;
+  /* text-transform: uppercase; */
+  letter-spacing: .5rem;
+  font-weight: 200;
+  color: #E7ECEF;
+  text-align: center;
+}
+
+.key {
+  /* border: .4rem solid #E7ECEF; */
+  border-radius: .5rem;
+  margin: 1.2rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 9rem;
+  text-align: center;
+  color: #E7ECEF;
+  background: rgba(194, 193, 194,0.8);
+  text-shadow: 0 0 .5rem #3a4454;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #f7f052;
+  box-shadow: 0 0 1.2rem #f7f052;
+}
+
+.kbd {
+  display: block;
+  font-size: 4rem;
+  background-color: none !important;
+  font-family: monospace;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #f7f052;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 1.5rem !important;
+}
+
+@media (max-width: 586px) {
+  .title {
+    font-size: 4rem;
+  }
+  .kbd {
+    font-size: 3rem;
+  }
+}

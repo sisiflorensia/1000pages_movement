@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Basic SEO -->
+      <!-- favicon -->
+      <link rel="title icon" href="favicon.png">
+    <title>Lalunatech | Drum Kit</title> <!-- placeholder for portfolio-->
+    <!-- <title>Salutaire | Meal Prep Delivery - Always Fresh, Everyday</title> -->
+    <meta name="description" content="A fun and interactive mini game built with vanilla JS.">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css ">
+    <!-- Vanilla Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f5e55803f2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="keys">
+      <div class="container keys align-item-center p-5">
+        <div class="row mt-5 mb-md-5 mb-4 pt-5 pb-md-5 pb-4">
+          <div class="col-12 title mx-auto">
+            Let's take a beat!
+          </div>
+        </div>
+        <div class="row align-self-center justify-content-around my-md-5 my-4 py-md-5 py-4">
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="65" data-id="1">
+              <span class="kbd">A</span>
+              <span class="sound">clap</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="83">
+              <span class="kbd">S</span>
+              <span class="sound">hihat</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="68">
+              <span class="kbd">D</span>
+              <span class="sound">kick</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="70">
+              <span class="kbd">F</span>
+              <span class="sound">o/hat</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="71">
+              <span class="kbd">G</span>
+              <span class="sound">boom</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="72">
+              <span class="kbd">H</span>
+              <span class="sound">ride</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="74">
+              <span class="kbd">J</span>
+              <span class="sound">snare</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="75">
+              <span class="kbd">K</span>
+              <span class="sound">tom</span>
+          </div>
+          <div class="col-xl-1 col-lg-2 col-3 mx-2 key" data-key="76">
+              <span class="kbd">L</span>
+              <span class="sound">tink</span>
+          </div>
+        </div>
+      </div>
+
+      <audio data-key="65" src="sounds/clap.wav"></audio>
+      <audio data-key="83" src="sounds/hihat.wav"></audio>
+      <audio data-key="68" src="sounds/kick.wav"></audio>
+      <audio data-key="70" src="sounds/openhat.wav"></audio>
+      <audio data-key="71" src="sounds/boom.wav"></audio>
+      <audio data-key="72" src="sounds/ride.wav"></audio>
+      <audio data-key="74" src="sounds/snare.wav"></audio>
+      <audio data-key="75" src="sounds/tom.wav"></audio>
+      <audio data-key="76" src="sounds/tink.wav"></audio>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container-fluid">
+        <!-- title -->
+        <div class="row justify-content-center">
+          <div class="col-sm-10 text-center mx-auto p-5">
+            <h1 class="display-4 text-warning font-weight-light mb-3">Stay connected</h1>
+            <div class="py-3">
+              <a href="https://www.facebook.com/sisi.florensia"><i class="fab fa-facebook-square fa-2x text-light ml-2"></i></a>
+              <a href="https://github.com/sisiflorensia"><i class="fab fa-github fa-2x text-light ml-2"></i></a>
+              <a href="https://www.linkedin.com/in/sisiflorensia"><i class="fab fa-linkedin-in fa-2x text-light ml-2"></i></a>
+              <a href="https://www.instagram.com/lalunatech/"><i class="fab fa-instagram fa-2x text-light ml-2"></i></a>
+            </div>
+            <p class="text-light font-weight-light">@lalunatech by Sisi Florensia</p>
+          </div>
+        </div>
+        <!-- end of footer -->
+      </div>
+    </section>
+
+    <script>
+      function playSoundKB(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        if (!audio) {
+          return ;
+        } else {
+          audio.currentTime = 0;
+          audio.play();
+          key.classList.add('playing');
+        };
+      };
+
+      function playSoundClicked(e) {
+        const keyData = e.currentTarget.dataset.key;
+        const audio = document.querySelector(`audio[data-key="${keyData}"]`);
+        if (!audio) {
+          return ;
+        } else {
+          audio.currentTime = 0;
+          audio.play();
+          e.currentTarget.classList.add('playing');
+        };
+      };
+
+      // Playback by keyboard 
+      window.addEventListener('keydown', playSoundKB); // 2. Playback sound when the key is pressed
+
+      // Playback by click
+      const keys = document.querySelectorAll('.key');
+      keys.forEach(key => key.addEventListener('click', playSoundClicked));
+      
+      // Remove the class 'playing' after the CSS transform is complete
+      keys.forEach(key => key.addEventListener('transitionend', (e) => {
+        if (e.propertyName !== 'transform') {
+          return ; // -> to skip if it's not transform
+        } else {
+          key.classList.remove('playing');
+        }
+      }));
+
+    </script>
+  </body>
+</html>
