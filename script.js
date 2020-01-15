@@ -25,7 +25,6 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         let position = $(this).scrollTop();
-        console.log(position)
         if (position >= 2700) {
             $('#card1').addClass('fly-left')
             $('#card2').addClass('rise-up')
@@ -46,7 +45,7 @@ $(document).ready(function() {
             $('.filter').filter('.' + value).show(300)
         }
     });
-    
+
     $('.gallery-list-item').click(function() {
         $(this).addClass('gallery-item-active').siblings().removeClass('gallery-item-active')
     });
