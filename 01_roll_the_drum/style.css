@@ -12,7 +12,6 @@ body,html {
   /* flex: 1; */
   min-height: 75vh;
   align-items: center;
-  cursor: pointer;
   /* justify-content: center; */
 }
 
@@ -37,6 +36,10 @@ body,html {
   color: #E7ECEF;
   background: rgba(194, 193, 194,0.8);
   text-shadow: 0 0 .5rem #3a4454;
+}
+
+.key:hover {
+  cursor: pointer;
 }
 
 .playing {
