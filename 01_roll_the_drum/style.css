@@ -1,6 +1,6 @@
 body,html {
   font-size: 10px;
-  background: linear-gradient(180deg,rgba(48, 102, 190,.8) 0%,rgba(150, 52, 132, .8) 100%), url(images/concert.jpg) bottom center;
+  background: linear-gradient(180deg,rgba(48, 102, 190,.8) 0%,rgba(150, 52, 132, .8) 100%), url(images/concert.webp) bottom center;
   background-size: cover;
   font-family: 'Lato', sans-serif;
   font-weight: 200;
