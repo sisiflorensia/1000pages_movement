@@ -69,6 +69,14 @@ body,html {
   font-size: 1.5rem !important;
 }
 
+.socmed {
+  transition: all 0.3s ease;
+}
+
+.socmed:hover {
+  transform: translateY(-2px);
+}
+
 @media (max-width: 586px) {
   .title {
     font-size: 4rem;
